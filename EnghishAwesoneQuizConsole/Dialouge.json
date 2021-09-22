@@ -1,0 +1,46 @@
+{
+  "Subject": "Do Schools kill creativity",
+  "Source": "Ted",
+  "Dialouge": [
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "안녕하세요",
+      "SentenceEng": "Good morning. How are you? "
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "정말 좋지 않습니까? 강연들이 너무 좋아 정신을 못 차리겠네요, 사실 그냥 집에 가야겠어요",
+      "SentenceEng": "It's been great, hasn't it? I've been blown away by the whole thing. In fact, I'm leaving."
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "이 강연에는 세 개의 주제가 있습니다. 그 세 가지 주제 모두 제가 오늘 강연할 내용과 겹치는 부분이 있습니다",
+      "SentenceEng": "There have been three themes running through the conference, which are relevant to what I want to talk about."
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "첫째는 우리가 본 강연들에서 나타나고 또 여러분들이 보여주고 있는 인류의 창의력입니다. 그 창의력이 얼마나 다양하고 광범위한지요",
+      "SentenceEng": "One is the extraordinary evidence of human creativity in all of the presentations that we've had and in all of the people here; just the variety of it and the range of it."
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "둘째는 창의성이라는 것이 미래의 관점에서 보면 무슨 일이 일어날지, 어떤 식으로 전개될지 아무도 알 수 없다는 점입니다.",
+      "SentenceEng": "The second is that it's put us in a place where we have no idea what's going to happen in terms of the future. No idea how this may play out."
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "저는 교육에 관심이 있습니다. 사실, 누구나 교육에 관심을 가지고 있다고 봅니다.",
+      "SentenceEng": "I have an interest in education. Actually, what I find is, everybody has an interest in education. Don't you?  "
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "그렇지 않아요? 흥미로운 사실이죠",
+      "SentenceEng": "Don't you? I find this very interesting."
+    },
+    {
+      "Name": "Sir Ken Robinson",
+      "SentenceKor": "사실 교육자라면, 음, 저녁 모임 같은데는 거의 안 가게 되겠죠?",
+      "SentenceEng": "actually, you're not often at dinner parties, frankly."
+    }
+  ]
+}

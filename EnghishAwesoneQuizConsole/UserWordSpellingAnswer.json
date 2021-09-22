@@ -1,0 +1,28 @@
+{
+  "UserName": "awesomeman",
+  "Question": {
+    "Id": "1",
+    "Answers": [
+      {
+        "Id": "1",
+        "Answer": "office"
+      },
+      {
+        "Id": "2",
+        "Answer": "Wife"
+      },
+      {
+        "Id": "3",
+        "Answer": "movie"
+      },
+      {
+        "Id": "4",
+        "Answer": "Famil"
+      },
+      {
+        "Id": "5",
+        "Answer": "Home"
+      }
+    ]
+  }
+}

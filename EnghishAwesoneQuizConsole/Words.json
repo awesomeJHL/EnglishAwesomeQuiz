@@ -1,0 +1,82 @@
+{
+  "Words": [
+    {
+      "Word": "accumulate",
+      "KorWord": "축적하다",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "allocate",
+      "KorWord": "할당하다",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "compulsory",
+      "KorWord": "의무적인",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "depict",
+      "KorWord": "묘사하다",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "absent",
+      "KorWord": "부재의",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "absorb",
+      "KorWord": "흡수하다",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "present",
+      "KorWord": "현재의",
+      "OrderKorWords": [ "존재하는", "현재", "주다", "제시하다" ],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "abundant",
+      "KorWord": "풍부한",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "sacrifice",
+      "KorWord": "희생",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "rub",
+      "KorWord": "문지르다",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "wealth",
+      "KorWord": "재산",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "competent",
+      "KorWord": "능숙한",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    },
+    {
+      "Word": "behavior",
+      "KorWord": "행동",
+      "OrderKorWords": [],
+      "ExampleSentences": []
+    }
+  ]
+}
