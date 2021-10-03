@@ -1,0 +1,17 @@
+﻿d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Helpers\CustomStringToEnumConverter.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\DialougeModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\Enums\BlankPosition.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\Enums\QuestionType.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\Enums\QuizLevel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\Enums\QuizType.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\ExampleModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\QuestionBankModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\QuestionModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\QuizOptionModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\QuizResultModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\ScoreModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\SentencesModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\UserAnswerModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\UserAnswerResultModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\UserQuestionModel.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\EnglishAwesomeQuizShared\Models\WordModel.cs

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace EnglishAwesomeQuizShared.Models
 {
-    public enum QuestionLevel
+    public enum QuizLevel
     {
-        H,
-        M,
-        L
+        L = 1,
+        M = 2,
+        H = 3
     }
 }

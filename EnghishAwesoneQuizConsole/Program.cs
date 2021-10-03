@@ -11,8 +11,6 @@ namespace EnghishAwesoneQuizConsole
 {
     class Program
     {
-        private static int MAX_QUIZ_COUNT = 5;
-
         static void Main(string[] args)
         {
             /*            GenerateFillBlankQuestion();
@@ -38,11 +36,15 @@ namespace EnghishAwesoneQuizConsole
 
             //GenerateDialouge(QuestionLevel.H);
 
+            //GenerateFillBlankQuestion(3);
+            GenerateFillBlankQuestion(3);
             GenerateWordQuestiion(QuestionLanguageType.KoreanToEnglish);
 
-            var userQuestionModel = GetJsonFileToModel<UserQuestionModel>("UserWordQuestion.json");
-            var userAnswerResult = GetJsonFileToModel<UserAnswerModel>("UserWordAnswer.json");
-            GenerateUserAnswerResult(userQuestionModel, userAnswerResult);
+            /*            GenerateWordQuestiion(QuestionLanguageType.KoreanToEnglish);
+
+                        var userQuestionModel = GetJsonFileToModel<UserQuestionModel>("UserWordQuestion.json");
+                        var userAnswerResult = GetJsonFileToModel<UserAnswerModel>("UserWordAnswer.json");
+                        GenerateUserAnswerResult(userQuestionModel, userAnswerResult);*/
         }
 
         // 정답체크로직
@@ -220,7 +222,7 @@ namespace EnghishAwesoneQuizConsole
                 question.CorrectAnswer = GetStringFromArray(sentence);
                 
                 //정답을 보기에 담기
-                question.Answers = randomSentence.ToList();
+                question.Options = randomSentence.ToList();
 
                 //오답을 보기에 담기 - TODO : 추후 문제난이도에 따라 동사, 명사, 형용사 등 지정해서 가져올 수 있도록 변경
                 var word = GetJsonFileToModel<WordModel>("Words.json");
@@ -230,7 +232,8 @@ namespace EnghishAwesoneQuizConsole
                 {
                     wrongAnswers.Add(word.Words[wordRandomNumber].Word);
                 }
-                question.Answers.AddRange(wrongAnswers);
+                
+                question.Options.AddRange(wrongAnswers);
 
                 Console.WriteLine($"문제: {question.Question}   보기:{question.ToString()}");
 
@@ -239,7 +242,7 @@ namespace EnghishAwesoneQuizConsole
         }
 
         // 대화형태의 문장생성
-        public static void GenerateDialouge(QuestionLevel level)
+        public static void GenerateDialouge(QuizLevel level)
         {
             var sentenceModels = GetJsonFileToModel<DialougeModel>("Dialouge.json");
             var numbers = GetRangeQuestion<Sentence>(sentenceModels.Dialouge, isRandom:false);
@@ -259,7 +262,7 @@ namespace EnghishAwesoneQuizConsole
                 question.CorrectAnswer = sentenceModels.Dialouge[number].SentenceEng;
 
                 //정답을 보기에 담기
-                question.Answers = randomSentence.ToList();
+                question.Options = randomSentence.ToList();
 
                 //TODO 정답을 보기에 넣을때 난이도에 따라 일부 값은 넣지 않도록
 
@@ -282,15 +285,15 @@ namespace EnghishAwesoneQuizConsole
         }
 
         // 레벨에 따른 보기를 제거
-        public static int GetRemoveAnswerCount(QuestionLevel level)
+        public static int GetRemoveAnswerCount(QuizLevel level)
         {
             switch (level)
             {
-                case QuestionLevel.H:
+                case QuizLevel.H:
                     return -2;
-                case QuestionLevel.M:
+                case QuizLevel.M:
                     return -1;
-                case QuestionLevel.L:
+                case QuizLevel.L:
                     return 0;
                 default:
                     return 0;
@@ -326,38 +329,68 @@ namespace EnghishAwesoneQuizConsole
         }
 
         // 빈칸채우기
-        public static void GenerateFillBlankQuestion()
+        public static void GenerateFillBlankQuestion(int blankcount = 1)
         {
             Console.WriteLine($"---------------------------------------");
             Console.WriteLine($"다음 문장의 ()에 알맞는 단어를 채우세요\n");
 
-            var sentenceModels = GetJsonFileToModel<SentencesModel>("Sentences.json");
-            var randomNumbers = GetRangeQuestion<Sentence>(sentenceModels.Sentences);
+            var rawdata = GetJsonFileToModel<SentencesModel>("Sentences.json");
+            var numbers = GetRangeQuestion<Sentence>(rawdata.Sentences);
 
             var questions = new List<QuestionModel>();
-            
-            foreach (var randomNumber in randomNumbers)
+            var correctAnswers = new String[blankcount];
+
+            foreach (var number in numbers)
             {
                 var question = new QuestionModel();
 
                 //Console.WriteLine(sentenceModels.Sentences[randomNumber].SentenceEng);
-                var sentence = sentenceModels.Sentences[randomNumber].SentenceEng.Split(" ");
-                var sentenceKor = sentenceModels.Sentences[randomNumber].SentenceKor.Split(" ");
+                var sentence = rawdata.Sentences[number].SentenceEng.Split(" ");
+                var sentenceKor = rawdata.Sentences[number].SentenceKor.Split(" ");
 
                 question.OrginalText = GetStringFromArray(sentence);
 
-                Random random = new Random();
-                var rNumber = random.Next(sentence.Count());
+                //빈칸갯수에따른 문제생성
+                var rnd = new Random();
+                var randomIndexs = Enumerable.Range(0, sentence.Count())
+                                  .OrderBy(x => rnd.Next()).Take(blankcount > sentence.Count() ? sentence.Count() : blankcount)
+                                  .ToList();
 
-                question.CorrectAnswer = sentence[rNumber];
-                sentence[rNumber] = "()";
+                //순서대로 정답을 넣기위해 내림차순으로 소트
+                randomIndexs.Sort();
 
-                question.Question = GetStringFromArray(sentenceKor) + "[" + GetStringFromArray(sentence) + "]";
-                Console.WriteLine($"문제: {question.Question}   답: {question.CorrectAnswer}");
+                foreach (var index in randomIndexs.Select((value, i) => new { i, value }))
+                {
+                    question.CorrectAnswer = sentence[index.value];
+                    correctAnswers[index.i] = sentence[index.value];
+                    sentence[index.value] = "( )";
+                }
 
-                question.Id = randomNumber;
+                question.Question = GetStringFromArray(sentenceKor) + " [ " + GetStringFromArray(sentence) + " ]";
+
+                question.Id = number;
+                question.CorrectAnswers = correctAnswers;
+                question.Options = correctAnswers.ToList();
+
+                //오답을 보기에 담기 - TODO : 추후 문제난이도에 따라 동사, 명사, 형용사 등 지정해서 가져올 수 있도록 변경
+                var word = GetJsonFileToModel<WordModel>("Words.json");
+                var wordRandomNumbers = GetRangeQuestion<Words>(word.Words);
+                var wrongAnswers = new List<string>();
+                foreach (var wordRandomNumber in wordRandomNumbers)
+                {
+                    wrongAnswers.Add(word.Words[wordRandomNumber].Word);
+                }
+                question.Options.AddRange(wrongAnswers);
+                
+                //보기를 섞기
+                question.Options = question.Options.OrderBy(x => rnd.Next()).ToList();
 
                 questions.Add(question);
+                correctAnswers = new String[blankcount];
+
+                Console.WriteLine($"문제: {question.Question}");
+                Console.WriteLine($"정답: {GetStringFromArray(question.CorrectAnswers)}");
+                Console.WriteLine($"보기: {question.ToString()}");
             }
         }
 
@@ -417,14 +450,14 @@ namespace EnghishAwesoneQuizConsole
         }
 
         //public static IEnumerable<int> GetRangeQuestion<T>(T models) where T : List<Sentence>
-        public static IEnumerable<int> GetRangeQuestion<T>(List<T> models, bool isRandom = true)
+        public static IEnumerable<int> GetRangeQuestion<T>(List<T> models, bool isRandom = true, int takeCount = 5)
         {
             var rnd = new Random();
             var numbers = new List<int>();
 
             if (isRandom)
             {
-                numbers = Enumerable.Range(0, models.Count).OrderBy(x => rnd.Next()).Take(MAX_QUIZ_COUNT).ToList();
+                numbers = Enumerable.Range(0, models.Count).OrderBy(x => rnd.Next()).Take(takeCount).ToList();
             }
             else
             {
@@ -452,7 +485,7 @@ namespace EnghishAwesoneQuizConsole
             var questions = new List<QuestionModel>();
 
             var rnd = new Random();
-            var randomNumbers = Enumerable.Range(0, 12).OrderBy(x => rnd.Next()).Take(MAX_QUIZ_COUNT).ToList();
+            var randomNumbers = Enumerable.Range(0, 12).OrderBy(x => rnd.Next()).Take(5).ToList();
             
             //문제, 답생성
             foreach (var randomNumber in randomNumbers)
@@ -478,7 +511,7 @@ namespace EnghishAwesoneQuizConsole
             {
                 var answers = new List<string>();
                 rnd = new Random();
-                randomNumbers = Enumerable.Range(0, 12).OrderBy(x => rnd.Next()).Take(MAX_QUIZ_COUNT - 1).ToList();
+                randomNumbers = Enumerable.Range(0, 12).OrderBy(x => rnd.Next()).Take(5 - 1).ToList();
 
                 //정답을 보기에 넣기
                 answers.Add(question.CorrectAnswer);
@@ -500,7 +533,7 @@ namespace EnghishAwesoneQuizConsole
                     }
                 }
 
-                question.Answers = answers.OrderBy( x => rnd.Next()).ToList();
+                question.Options = answers.OrderBy( x => rnd.Next()).ToList();
                 question.Id = questionId++;
             }
 
@@ -508,7 +541,7 @@ namespace EnghishAwesoneQuizConsole
             foreach (var question in questions)
             {
                 Console.WriteLine($"아이디 : {question.Id} - 문제 : {question.Question} \n 답 : {question.CorrectAnswer}");
-                Console.WriteLine($"보기 : {question.Answers.Aggregate((x, y) => x + ", " + y)}");
+                Console.WriteLine($"보기 : {question.Options.Aggregate((x, y) => x + ", " + y)}");
             }
 /*
             //문제 은행만들기

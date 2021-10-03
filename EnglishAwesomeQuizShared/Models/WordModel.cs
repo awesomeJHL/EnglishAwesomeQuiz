@@ -15,6 +15,7 @@ namespace EnglishAwesomeQuizShared.Models
     {
         public string Word { get; set; }
         public string KorWord { get; set; }
+        public int Level { get; set; }
         public string[] OrderKorWords { get; set; }
         public string[] ExampleSentences { get; set; }
     }

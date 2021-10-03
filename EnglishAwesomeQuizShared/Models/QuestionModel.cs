@@ -12,9 +12,9 @@ namespace EnglishAwesomeQuizShared.Models
         
         //문제
         public string Question { get; set; }
-        
-        //보기
-        public List<string> Answers { get; set; }
+
+        //보기 TODO Choices 로 변경
+        public List<string> Options { get; set; }
         
         //정답
         public string CorrectAnswer { get; set; }
@@ -23,13 +23,13 @@ namespace EnglishAwesomeQuizShared.Models
         public string[] CorrectAnswers { get; set; }
 
         //문제유형 - 주/객/다지
-        public string QuestionType { get; set; }
+        public QuizType QuizType { get; set; }
 
         public string OrginalText { get; set; }
 
         public override string ToString()
         {
-            return string.Join(",", Answers);
+            return string.Join(",", Options);
         }
     }
 }

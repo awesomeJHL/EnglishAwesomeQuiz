@@ -1,0 +1,10 @@
+﻿d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\Controllers\WeatherForecastController.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\Program.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\Startup.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\WeatherForecast.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\obj\Debug\net5.0\HttpsTest.AssemblyInfo.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\obj\Debug\net5.0\HttpsTest.MvcApplicationPartsAssemblyInfo.cs
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\appsettings.Development.json
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\appsettings.json
+d:\05.WorkSpace\SideProject\EnglishAwesomeQuiz\HttpsTest\Properties\launchSettings.json

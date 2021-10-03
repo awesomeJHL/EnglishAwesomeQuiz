@@ -1,0 +1,352 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    body {
+        font-family: 'Rubik', sans-serif;
+        font-weight: bolder;
+        margin: 0px;
+        padding: 0px;
+        user-select: none;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .cards {
+        width: 250px;
+        height: 300px;
+        background: #fff;
+        margin: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px 0px #313131;
+        background-size: 102%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card1 {
+        background-image: url("./images/nakyung1.jpg");
+    }
+
+    .card2 {
+        background-image: url("./images/chanwoo1.jpg");
+        /* or
+            background-image:url("https://i.hizliresim.com/gp7wjgg.jpg");*/
+    }
+
+    .card3 {
+        background-image: url("./images/jonghak1.jpg");
+    }
+
+    .bottom-bar {
+        width: 100%;
+        height: 45px;
+        position: absolute;
+        bottom: -100%;
+        background: mediumslateblue;
+        transition: all 0.3s;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        border-top: 1px solid #3333;
+    }
+
+    .cards:hover .bottom-bar {
+        bottom: 0px;
+    }
+
+    .cards a {
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 4px;
+        color: whitesmoke;
+    }
+
+        .cards a:hover {
+            background: #3333;
+            color: white;
+        }
+
+    .cards p {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: -5px;
+        font-size: 18px;
+        color: whitesmoke;
+    }
+
+    label {
+        background: linear-gradient(-180deg, #FFFFFF 0%, #EAF1F5 97%);
+        box-shadow: 0px 1px 5px 0px rgba(93,145,171,0.6);
+        border-radius: 3px;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+
+        input[type=radio]:checked + label {
+            background: mediumslateblue;
+            box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+            color: #fff;
+            cursor: default;
+        }
+
+    select {
+        appearance: none;
+        outline: 0;
+        box-shadow: none;
+        border: 0 !important;
+        background: #5c6664;
+        background-image: none;
+        flex: 1;
+        padding: 0 .5em;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1em;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+        select::-ms-expand {
+            display: none;
+        }
+
+    .select {
+        position: relative;
+        display: flex;
+        width: 15em;
+        height: 2.8em;
+        line-height: 3;
+        background: #5c6664;
+        overflow: hidden;
+        border-radius: .25em;
+    }
+
+        .select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            background: #2b2e2e;
+            cursor: pointer;
+            pointer-events: none;
+            transition: .25s all ease;
+        }
+
+        .select:hover::after {
+            color: mediumslateblue;
+        }
+</style>
+
+<div class="container">
+    <div class="cards card1">
+        <p id="easy_p">Easy</p>
+        <div class="bottom-bar"><a id="easy_a">Easy</a></div>
+    </div>
+    <!---------------------------->
+    <div class="cards card2">
+        <p id="medium_p">Medium</p>
+        <div class="bottom-bar"><a id="medium_a">Medium</a></div>
+    </div>
+    <!---------------------------->
+    <div class="cards card3">
+        <p id="hard_p">Hard</p>
+        <div class="bottom-bar"><a id="hard_a">Hard</a></div>
+    </div>
+</div>
+<div class="container">
+    <div class="select">
+        <select name="quizcount_sel" id="quizcount_sel">
+            <option value="" selected disabled>Choose Quiz Count</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+    </div>
+    <div>
+        <input type="radio" name="quizLangType" value="0" id="kor" />
+        <label for="kor">한국어 > 영어</label>
+    </div>
+    <div>
+        <input type="radio" name="quizLangType" value="1" id="eng" checked="checked" />
+        <label for="eng">영어 > 한국어</label>
+    </div>
+</div>
+<!-- start Quiz button -->
+<div class="start_btn"><button>Start Quiz</button></div>
+
+<!-- Info Box -->
+<div class="info_box">
+    <div class="info-title"><span>Some Rules of this Quiz</span></div>
+    <div class="info-list">
+        <div class="info" id="info1_div">1. 난이도 00를 선택하셨습니다 </div>
+        <div class="info" id="info2_div">2. 총 00 문제가 출제됩니다 </div>
+        <div class="info" id="info3_div">3. 00 > 00 문제가 출제됩니다 </div>
+        <div class="info">4. 15초 이내에 문제를 풀어야 합니다</div>
+    </div>
+    <div class="buttons">
+        <button class="quit">Exit Quiz</button>
+        <button class="restart">Continue</button>
+    </div>
+</div>
+
+<!-- Quiz Box -->
+<div class="quiz_box">
+    <header>
+        <div class="title">Awesome Quiz Application</div>
+        <div class="timer">
+            <div class="time_left_txt">Time Left</div>
+            <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+    </header>
+    <section>
+        <div class="que_text">
+            <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option_list">
+            <!-- Here I've inserted options from JavaScript -->
+        </div>
+    </section>
+
+    <!-- footer of Quiz Box -->
+    <footer>
+        <div class="total_que">
+            <!-- Here I've inserted Question Count Number from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="quit_btn">Exit Quiz</button>
+            <button class="next_btn">Next Que</button>
+        </div>
+    </footer>
+</div>
+
+<!-- Result Box -->
+<div class="result_box">
+    <div class="icon">
+        <i class="fas fa-crown"></i>
+    </div>
+    <div class="complete_text">You've completed the Quiz!</div>
+    <div class="score_text">
+        <!-- Here I've inserted Score Result from JavaScript -->
+    </div>
+    <div class="buttons">
+        <button class="restart">Replay Quiz</button>
+        <button class="quit">Quit Quiz</button>
+    </div>
+</div>
+@section scripts{
+    <script>
+        let questions = [{}];
+        let level = 0;
+        let info1_div = document.getElementById("info1_div");
+
+        const getQuiz = async () => {
+            await doRequest();
+        };
+
+        easy_a.onclick = () => {
+            level = document.getElementById("easy_a").innerText;
+            document.getElementById('hard_p').style = "Color: white";
+            document.getElementById('medium_p').style = "Color: white";
+            document.getElementById('easy_p').style = "Color: mediumslateblue";
+        }
+
+        medium_a.onclick = () => {
+            level = document.getElementById("medium_a").innerText;
+            document.getElementById('hard_p').style = "Color: white";
+            document.getElementById('medium_p').style = "Color: mediumslateblue";
+            document.getElementById('easy_p').style = "Color: white";
+        }
+
+        hard_a.onclick = () => {
+            level = document.getElementById("hard_a").innerText;
+            document.getElementById('hard_p').style = "Color: mediumslateblue";
+            document.getElementById('medium_p').style = "Color: white";
+            document.getElementById('easy_p').style = "Color: white";
+        }
+
+        function setInfo() {
+            info1_div.innerText = "1. 난이도 " + level + "를 선택하셨습니다";
+            info2_div.innerText = "2. 총 " + document.getElementById("quizcount_sel").value + "문제가 출제됩니다";
+
+            if (displayRadioValue('quizLangType') == "0") {
+                info3_div.innerText = "3. 한국어 > 영어 문제가 출제됩니다";
+            } else if (displayRadioValue('quizLangType') == "1") {
+                info3_div.innerText = "3. 영어 > 한국어 문제가 출제됩니다";
+            }
+        }
+
+        function getLevel(levleCode) {
+            switch (levleCode) {
+                case "Easy":
+                    return 1;
+                case "Medium":
+                    return 2;
+                case "Hard":
+                    return 3;
+                default:
+                    return 1;
+            }
+        }
+
+        async function doRequest() {
+            const element = document.querySelector('#post-request .article-id');
+            const params = {
+                questionLanguageType: parseInt(displayRadioValue('quizLangType')),
+                blank: 1,
+                choice: 1,
+                level: parseInt(getLevel(level)),
+                quizType: 0,
+                quizCount: parseInt(document.getElementById("quizcount_sel").value)
+            };
+            await httpclient.post('quiz/api/list', params)
+                .then(response => questions = response.data);
+
+            console.log(questions);
+        }
+
+        function isValidation() {
+
+            if (level == "") {
+                alert("Choose Quiz level");
+                return false;
+            }
+
+            if (document.getElementById("quizcount_sel").value == "") {
+                alert("Choose Quiz Count");
+                document.getElementById("quizcount_sel").focus();
+                return false;
+            }
+            return true;
+        }
+
+        function displayRadioValue() {
+            var ele = document.getElementsByName('quizLangType');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    return ele[i].value;
+            }
+            return "";
+        }
+    </script>
+}

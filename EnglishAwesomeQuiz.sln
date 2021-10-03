@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnghishAwesoneQuizConsole",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnglishAwesomeQuizShared", "EnglishAwesomeQuizShared\EnglishAwesomeQuizShared.csproj", "{5192F7FC-1B2D-4465-BE68-97F477658949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpsTest", "HttpsTest\HttpsTest.csproj", "{49D9F88B-C5A7-4F42-9950-2AD4D1542627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpsTest", "HttpsTest\HttpsTest.csproj", "{49D9F88B-C5A7-4F42-9950-2AD4D1542627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishAwesomeQuizView", "EnglishAwesomeQuizView\EnglishAwesomeQuizView.csproj", "{848496AD-32D0-44B1-9105-99EFD0A97F39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{49D9F88B-C5A7-4F42-9950-2AD4D1542627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49D9F88B-C5A7-4F42-9950-2AD4D1542627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D9F88B-C5A7-4F42-9950-2AD4D1542627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848496AD-32D0-44B1-9105-99EFD0A97F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848496AD-32D0-44B1-9105-99EFD0A97F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848496AD-32D0-44B1-9105-99EFD0A97F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848496AD-32D0-44B1-9105-99EFD0A97F39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
