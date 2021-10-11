@@ -24,5 +24,12 @@ namespace EnglishAwesomeQuiz.Controllers
         {
             return Ok(_quizService.GetWordQuiz(param));
         }
+
+        [HttpPost("api/sentence/list")]
+        public async Task<IActionResult> GetSentenceQuiz([FromBody] QuizOptionModel param)
+        {
+            //TODO 난이도에 따라서 blank숫자를 설정하도록 하자
+            return Ok(_quizService.GetSentenceQuiz(param));
+        }
     }
 }

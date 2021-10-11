@@ -13,6 +13,8 @@ namespace EnglishAwesomeQuizShared.Models
         //문제
         public string Question { get; set; }
 
+        public string QuestionKor { get; set; }
+
         //보기 TODO Choices 로 변경
         public List<string> Options { get; set; }
         

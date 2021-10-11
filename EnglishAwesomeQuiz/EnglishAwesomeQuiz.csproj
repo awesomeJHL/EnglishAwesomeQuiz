@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Data\EngToEngWords.json" />
+    <Content Remove="Data\Sentences.json" />
     <Content Remove="Data\Words.json" />
   </ItemGroup>
 
@@ -26,6 +28,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Data\EngToEngWords.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Sentences.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Data\Words.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

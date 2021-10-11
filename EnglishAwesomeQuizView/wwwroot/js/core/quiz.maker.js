@@ -13,11 +13,11 @@ const timeCount = document.querySelector(".timer .timer_sec");
 //TODO : 키 이벤트 추가
 
 // if startQuiz button clicked
-start_btn.onclick = () => {
-    if (!isValidation()) return;
-    setInfo();
-    info_box.classList.add("activeInfo"); //show info box
-}
+// start_btn.onclick = ()=>{
+//     if(!isValidation()) return;
+//     setInfo();
+//     info_box.classList.add("activeInfo"); //show info box
+// }
 
 // if exitQuiz button clicked
 exit_btn.onclick = () => {
@@ -25,9 +25,9 @@ exit_btn.onclick = () => {
 }
 
 // if continueQuiz button clicked
-continue_btn.onclick = () => {
-    getQuiz().then(() => startQuiz());
-}
+// continue_btn.onclick = ()=>{
+//     getQuiz().then(() => startQuiz());
+// }
 
 function startQuiz() {
     info_box.classList.remove("activeInfo"); //hide info box
@@ -46,13 +46,12 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
-// if restartQuiz button clicked
-restart_quiz.onclick = () => {
-    getQuiz().then(() => reStartQuiz());
-}
+// // if restartQuiz button clicked
+// restart_quiz.onclick = ()=>{
+//     getQuiz().then(() => reStartQuiz());
+// }
 
 function reStartQuiz() {
     quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -237,8 +236,8 @@ function startTimerLine(time) {
     }
 }
 
-function queCounter(index) {
+/*function queCounter(index) {
     //creating a new span tag and passing the question number and total question
     let totalQueCounTag = '<span><p>' + index + '</p> of <p>' + questions.length + '</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
-}
+}*/

@@ -9,5 +9,6 @@ namespace EnglishAwesomeQuiz.Interfaces
     public interface IQuizService
     {
         public List<QuestionModel> GetWordQuiz(QuizOptionModel param);
+        public List<QuestionModel> GetSentenceQuiz(QuizOptionModel param);
     }
 }

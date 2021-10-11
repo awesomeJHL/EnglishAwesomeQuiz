@@ -10,6 +10,7 @@ namespace EnglishAwesomeQuizShared.Models
     {
         KoreanToEnglish,
         EnglishToKorean,
+        EnglishToEnglish,
         Random
     }
 }

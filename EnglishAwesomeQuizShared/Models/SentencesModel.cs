@@ -14,6 +14,7 @@ namespace EnglishAwesomeQuizShared.Models
     public class Sentence
     {
         public string Name { get; set; }
+        public int Level { get; set; }
         public string SentenceKor { get; set; }
         public string SentenceEng { get; set; }
     }

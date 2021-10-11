@@ -11,12 +11,12 @@ namespace EnglishAwesomeQuizShared.Models
     public class QuizOptionModel
     {
         public QuestionLanguageType QuestionLanguageType { get; set; }
-        
-        public int Blank { get; set; }
 
         public int Choice { get; set; }
 
         public int QuizCount { get; set; }
+
+        public int Blankcount { get; set; }
 
         public  QuizLevel Level { get; set; }
 

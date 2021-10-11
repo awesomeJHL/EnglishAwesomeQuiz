@@ -31,14 +31,14 @@ namespace EnghishAwesoneQuizConsole
 
                         GenerateWordQuestiion();*/
             //TODO 객관식문제 답, 점수체크로직 개발
-
-            //GenerateOrderingExtendQuestion();
+            GenerateOrderingQuestion();
+            GenerateOrderingExtendQuestion();
 
             //GenerateDialouge(QuestionLevel.H);
 
             //GenerateFillBlankQuestion(3);
-            GenerateFillBlankQuestion(3);
-            GenerateWordQuestiion(QuestionLanguageType.KoreanToEnglish);
+            //GenerateFillBlankQuestion(2);
+            //GenerateWordQuestiion(QuestionLanguageType.EnglishToEnglish);
 
             /*            GenerateWordQuestiion(QuestionLanguageType.KoreanToEnglish);
 
@@ -226,7 +226,7 @@ namespace EnghishAwesoneQuizConsole
 
                 //오답을 보기에 담기 - TODO : 추후 문제난이도에 따라 동사, 명사, 형용사 등 지정해서 가져올 수 있도록 변경
                 var word = GetJsonFileToModel<WordModel>("Words.json");
-                var wordRandomNumbers = GetRangeQuestion<Words>(word.Words);
+                var wordRandomNumbers = GetRangeQuestion<Words>(word.Words,true,1);
                 var wrongAnswers = new List<string>();
                 foreach (var wordRandomNumber in wordRandomNumbers)
                 {
@@ -366,15 +366,18 @@ namespace EnghishAwesoneQuizConsole
                     sentence[index.value] = "( )";
                 }
 
-                question.Question = GetStringFromArray(sentenceKor) + " [ " + GetStringFromArray(sentence) + " ]";
-
+                question.Question =  GetStringFromArray(sentence);
+                question.QuestionKor = GetStringFromArray(sentenceKor);
                 question.Id = number;
                 question.CorrectAnswers = correctAnswers;
                 question.Options = correctAnswers.ToList();
 
                 //오답을 보기에 담기 - TODO : 추후 문제난이도에 따라 동사, 명사, 형용사 등 지정해서 가져올 수 있도록 변경
                 var word = GetJsonFileToModel<WordModel>("Words.json");
-                var wordRandomNumbers = GetRangeQuestion<Words>(word.Words);
+                
+                //TODO : 난이도에 따라 takeCount를 설정하도록 변경
+                var wordRandomNumbers = GetRangeQuestion<Words>(word.Words, takeCount:8);
+
                 var wrongAnswers = new List<string>();
                 foreach (var wordRandomNumber in wordRandomNumbers)
                 {
@@ -388,7 +391,8 @@ namespace EnghishAwesoneQuizConsole
                 questions.Add(question);
                 correctAnswers = new String[blankcount];
 
-                Console.WriteLine($"문제: {question.Question}");
+                Console.WriteLine($"문제(영): {question.Question}");
+                Console.WriteLine($"문제(한): {question.QuestionKor}");
                 Console.WriteLine($"정답: {GetStringFromArray(question.CorrectAnswers)}");
                 Console.WriteLine($"보기: {question.ToString()}");
             }
@@ -466,12 +470,32 @@ namespace EnghishAwesoneQuizConsole
             return numbers;
         }
 
+        public static void GenerateEngToEngWordQuestiion(QuestionLanguageType questionLanguageType)
+        {
+            Console.WriteLine($"-----------------------------E----------");
+            Console.WriteLine($"다음 뜻 맞는 단어를 선택하세요\n");
+
+            var m = GetJsonFileToModel<WordModel>("EngToEngWords.json");
+
+
+
+        }
+
         public static void GenerateWordQuestiion(QuestionLanguageType questionLanguageType)
         {
             Console.WriteLine($"---------------------------------------");
             Console.WriteLine($"다음 단어에 맞는 뜻을 선택하세요\n");
 
-            var m = GetJsonFileToModel<WordModel>("Words.json");
+            var m = new WordModel();
+
+            if(questionLanguageType == QuestionLanguageType.EnglishToEnglish)
+            {
+                m = GetJsonFileToModel<WordModel>("EngToEngWords.json");
+            }
+            else
+            {
+                m = GetJsonFileToModel<WordModel>("Words.json");
+            }
 
             //Console.WriteLine(m.Words.Count);
 
@@ -485,7 +509,7 @@ namespace EnghishAwesoneQuizConsole
             var questions = new List<QuestionModel>();
 
             var rnd = new Random();
-            var randomNumbers = Enumerable.Range(0, 12).OrderBy(x => rnd.Next()).Take(5).ToList();
+            var randomNumbers = Enumerable.Range(0, m.Words.Count-1).OrderBy(x => rnd.Next()).Take(5).ToList();
             
             //문제, 답생성
             foreach (var randomNumber in randomNumbers)
@@ -498,6 +522,10 @@ namespace EnghishAwesoneQuizConsole
                 else if (questionLanguageType == QuestionLanguageType.KoreanToEnglish)
                 {
                     questions.Add(new QuestionModel { Id = randomNumber, Question = m.Words[randomNumber].KorWord, CorrectAnswer = m.Words[randomNumber].Word });
+                }
+                else if (questionLanguageType == QuestionLanguageType.EnglishToEnglish)
+                {
+                    questions.Add(new QuestionModel { Id = randomNumber, Question = m.Words[randomNumber].Meaning, CorrectAnswer = m.Words[randomNumber].Word });
                 }
                 else
                 {
@@ -524,6 +552,10 @@ namespace EnghishAwesoneQuizConsole
                         answers.Add(m.Words[randomNumber].KorWord);
                     }
                     else if (questionLanguageType == QuestionLanguageType.KoreanToEnglish)
+                    {
+                        answers.Add(m.Words[randomNumber].Word);
+                    }
+                    else if (questionLanguageType == QuestionLanguageType.EnglishToEnglish)
                     {
                         answers.Add(m.Words[randomNumber].Word);
                     }

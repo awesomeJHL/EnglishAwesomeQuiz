@@ -1,285 +1,196 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Awesome English";
 }
 
 <style>
-    body {
-        font-family: 'Rubik', sans-serif;
-        font-weight: bolder;
-        margin: 0px;
-        padding: 0px;
-        user-select: none;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
-
-    .cards {
-        width: 250px;
-        height: 300px;
-        background: #fff;
-        margin: 20px;
-        border-radius: 15px;
-        box-shadow: 0px 0px 15px 0px #313131;
-        background-size: 102%;
-        background-repeat: no-repeat;
-        background-position: top center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .card1 {
-        background-image: url("./images/nakyung1.jpg");
-    }
-
-    .card2 {
-        background-image: url("./images/chanwoo1.jpg");
-        /* or
-            background-image:url("https://i.hizliresim.com/gp7wjgg.jpg");*/
-    }
-
-    .card3 {
-        background-image: url("./images/jonghak1.jpg");
-    }
-
-    .bottom-bar {
-        width: 100%;
-        height: 45px;
-        position: absolute;
-        bottom: -100%;
-        background: mediumslateblue;
-        transition: all 0.3s;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99;
-        border-top: 1px solid #3333;
-    }
-
-    .cards:hover .bottom-bar {
-        bottom: 0px;
-    }
-
-    .cards a {
-        cursor: pointer;
-        padding: 5px 10px;
-        border-radius: 4px;
-        color: whitesmoke;
-    }
-
-        .cards a:hover {
-            background: #3333;
-            color: white;
-        }
-
-    .cards p {
-        text-align: center;
-        position: absolute;
-        width: 100%;
-        bottom: -5px;
-        font-size: 18px;
-        color: whitesmoke;
-    }
-
-    label {
-        background: linear-gradient(-180deg, #FFFFFF 0%, #EAF1F5 97%);
-        box-shadow: 0px 1px 5px 0px rgba(93,145,171,0.6);
-        border-radius: 3px;
-        padding: 10px 15px;
-        cursor: pointer;
-    }
-
-    input[type=radio] {
-        display: none;
-    }
-
-        input[type=radio]:checked + label {
-            background: mediumslateblue;
-            box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
-            color: #fff;
-            cursor: default;
-        }
-
-    select {
-        appearance: none;
-        outline: 0;
-        box-shadow: none;
-        border: 0 !important;
-        background: #5c6664;
-        background-image: none;
-        flex: 1;
-        padding: 0 .5em;
-        color: #fff;
-        cursor: pointer;
-        font-size: 1em;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-        select::-ms-expand {
-            display: none;
-        }
-
-    .select {
-        position: relative;
-        display: flex;
-        width: 15em;
-        height: 2.8em;
-        line-height: 3;
-        background: #5c6664;
-        overflow: hidden;
-        border-radius: .25em;
-    }
-
-        .select::after {
-            content: '\25BC';
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 0 1em;
-            background: #2b2e2e;
-            cursor: pointer;
-            pointer-events: none;
-            transition: .25s all ease;
-        }
-
-        .select:hover::after {
-            color: mediumslateblue;
-        }
 </style>
 
-<div class="container">
-    <div class="cards card1">
-        <p id="easy_p">Easy</p>
-        <div class="bottom-bar"><a id="easy_a">Easy</a></div>
-    </div>
-    <!---------------------------->
-    <div class="cards card2">
-        <p id="medium_p">Medium</p>
-        <div class="bottom-bar"><a id="medium_a">Medium</a></div>
-    </div>
-    <!---------------------------->
-    <div class="cards card3">
-        <p id="hard_p">Hard</p>
-        <div class="bottom-bar"><a id="hard_a">Hard</a></div>
-    </div>
-</div>
-<div class="container">
-    <div class="select">
-        <select name="quizcount_sel" id="quizcount_sel">
-            <option value="" selected disabled>Choose Quiz Count</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-        </select>
-    </div>
-    <div>
-        <input type="radio" name="quizLangType" value="0" id="kor" />
-        <label for="kor">한국어 > 영어</label>
-    </div>
-    <div>
-        <input type="radio" name="quizLangType" value="1" id="eng" checked="checked" />
-        <label for="eng">영어 > 한국어</label>
-    </div>
-</div>
-<!-- start Quiz button -->
-<div class="start_btn"><button>Start Quiz</button></div>
-
-<!-- Info Box -->
-<div class="info_box">
-    <div class="info-title"><span>Some Rules of this Quiz</span></div>
-    <div class="info-list">
-        <div class="info" id="info1_div">1. 난이도 00를 선택하셨습니다 </div>
-        <div class="info" id="info2_div">2. 총 00 문제가 출제됩니다 </div>
-        <div class="info" id="info3_div">3. 00 > 00 문제가 출제됩니다 </div>
-        <div class="info">4. 15초 이내에 문제를 풀어야 합니다</div>
-    </div>
-    <div class="buttons">
-        <button class="quit">Exit Quiz</button>
-        <button class="restart">Continue</button>
-    </div>
-</div>
-
-<!-- Quiz Box -->
-<div class="quiz_box">
-    <header>
-        <div class="title">Awesome Quiz Application</div>
-        <div class="timer">
-            <div class="time_left_txt">Time Left</div>
-            <div class="timer_sec">15</div>
+    <div class="container">
+        <div class="cards card1">
+            <p id="easy_p">Easy</p>
+            <div class="bottom-bar"><a id="easy_a">Easy Level</a></div>
         </div>
-        <div class="time_line"></div>
-    </header>
-    <section>
-        <div class="que_text">
-            <!-- Here I've inserted question from JavaScript -->
+        <!---------------------------->
+        <div class="cards card2">
+            <p id="medium_p">Medium</p>
+            <div class="bottom-bar"><a id="medium_a">Medium Level</a></div>
         </div>
-        <div class="option_list">
-            <!-- Here I've inserted options from JavaScript -->
+        <!---------------------------->
+        <div class="cards card3">
+            <p id="hard_p">Hard</p>
+            <div class="bottom-bar"><a id="hard_a">Hard Level</a></div>
         </div>
-    </section>
+    </div>
+    <div class="container">
+        <div>
+            <input type="radio" name="quizType" value="word" id="word" checked="checked" />
+            <label for="word">단어</label>
+        </div>
+        <div>
+            <input type="radio" name="quizType" value="sentence" id="sentence" />
+            <label for="sentence">문장</label>
+        </div>&nbsp;
+        <div class="select">
+            <select name="quizcount_sel" id="quizcount_sel">
+                <option value="" selected disabled>Choose Quiz Count</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+        </div>&nbsp;
+        <div>
+            <input type="radio" name="quizLangType" value="0" id="korToEng" checked="checked" />
+            <label for="korToEng">한국어 > 영어</label>
+        </div>
+        <div>
+            <input type="radio" name="quizLangType" value="1" id="engToKor" />
+            <label for="engToKor">영어 > 한국어</label>
+        </div>
+        <div>
+            <input type="radio" name="quizLangType" value="2" id="engToEng" />
+            <label for="engToEng">영어 > 영어</label>
+        </div>
+    </div>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>Start Quiz</button></div>
 
-    <!-- footer of Quiz Box -->
-    <footer>
-        <div class="total_que">
-            <!-- Here I've inserted Question Count Number from JavaScript -->
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info" id="info1_div">1. 난이도 00를 선택하셨습니다 </div>
+            <div class="info" id="info2_div">2. 총 00 문제가 출제됩니다 </div>
+            <div class="info" id="info3_div">3. 00 > 00 문제가 출제됩니다 </div>
+            <div class="info">4. 15초 이내에 문제를 풀어야 합니다</div>
         </div>
         <div class="buttons">
-            <button class="quit_btn">Exit Quiz</button>
-            <button class="next_btn">Next Que</button>
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
         </div>
-    </footer>
-</div>
+    </div>
 
-<!-- Result Box -->
-<div class="result_box">
-    <div class="icon">
-        <i class="fas fa-crown"></i>
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Awesome Quiz Application</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <div class="buttons">
+                <button class="quit_btn">Exit Quiz</button>
+                <button class="next_btn">Next Que</button>
+            </div>
+        </footer>
     </div>
-    <div class="complete_text">You've completed the Quiz!</div>
-    <div class="score_text">
-        <!-- Here I've inserted Score Result from JavaScript -->
+
+    <div class="quiz_sentence_box">
+        <header>
+            <div class="title">Awesome Quiz Application</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">00</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <h5 id="que_kor_title"></h5>
+                <h5 id="que_correct_answer" style="color: tomato;"></h5>
+                <section class="sentence">
+                    <p id="que_kor">This <span class="inline v-baseline" onclick=optionblankSelect(this)>is</span> awesome </p>
+                </section>
+            </div>
+            <div class="sentence_option_list">
+                <h5>choose correct word</h5>
+                <section class="sentence">
+                    <p id="sentence_options">
+                        <span class="inline-block v-baseline" onclick=optionWordSelect(this)>awesome</span>
+                    </p>
+                </section>
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+            </div>
+            <div class="buttons">
+                <button class="show" id='exit_quiz_btn'>Exit Quiz</button>
+                <button class="show" id='answer_check_btn'>Answer</button>
+                <button class="next_btn" id='next_sentence_btn'>Next</button>
+            </div>
+        </footer>
     </div>
-    <div class="buttons">
-        <button class="restart">Replay Quiz</button>
-        <button class="quit">Quit Quiz</button>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
     </div>
-</div>
+
 @section scripts{
     <script>
         let questions = [{}];
         let level = 0;
         let info1_div = document.getElementById("info1_div");
-
-        const getQuiz = async () => {
-            await doRequest();
-        };
+        let quizType;
+        let selected_blank_element;
+        const quiz_sentence_box = document.querySelector(".quiz_sentence_box");
+        const que_kor_title = document.getElementById("que_kor_title");
+        const que_kor = document.getElementById("que_kor");
+        const sentence_options = document.getElementById("sentence_options");
+        const timeSentenceCount = document.querySelector(".quiz_sentence_box header .timer .timer_sec");
+        const timeSentenceText = document.querySelector(".quiz_sentence_box header .timer .time_left_txt");
+        const restart_quiz = result_box.querySelector(".buttons .restart");
+        const bottom_ques_counters = document.querySelectorAll("footer .total_que");
+        // const getQuiz = async () => {
+        //     await doRequest();
+        // };
 
         easy_a.onclick = () => {
-            level = document.getElementById("easy_a").innerText;
+            level = document.getElementById("easy_p").innerText;
             document.getElementById('hard_p').style = "Color: white";
             document.getElementById('medium_p').style = "Color: white";
             document.getElementById('easy_p').style = "Color: mediumslateblue";
         }
 
         medium_a.onclick = () => {
-            level = document.getElementById("medium_a").innerText;
+            level = document.getElementById("medium_p").innerText;
             document.getElementById('hard_p').style = "Color: white";
             document.getElementById('medium_p').style = "Color: mediumslateblue";
             document.getElementById('easy_p').style = "Color: white";
         }
 
         hard_a.onclick = () => {
-            level = document.getElementById("hard_a").innerText;
+            level = document.getElementById("hard_p").innerText;
             document.getElementById('hard_p').style = "Color: mediumslateblue";
             document.getElementById('medium_p').style = "Color: white";
             document.getElementById('easy_p').style = "Color: white";
@@ -289,10 +200,17 @@
             info1_div.innerText = "1. 난이도 " + level + "를 선택하셨습니다";
             info2_div.innerText = "2. 총 " + document.getElementById("quizcount_sel").value + "문제가 출제됩니다";
 
-            if (displayRadioValue('quizLangType') == "0") {
-                info3_div.innerText = "3. 한국어 > 영어 문제가 출제됩니다";
-            } else if (displayRadioValue('quizLangType') == "1") {
-                info3_div.innerText = "3. 영어 > 한국어 문제가 출제됩니다";
+            if (quizType === "sentence") {
+                info3_div.innerText = "3. 보기에서 빈칸에 알맞는 단어를 채우세요.";
+            } else {
+                if (displayRadioValue('quizLangType') == "0") {
+                    info3_div.innerText = "3. 한국어 > 영어 문제가 출제됩니다";
+                } else if (displayRadioValue('quizLangType') == "1") {
+                    info3_div.innerText = "3. 영어 > 한국어 문제가 출제됩니다";
+                } else if (displayRadioValue('quizLangType') == "2") {
+                    info1_div.innerText = "1. 이 유형은 난이도가 적용되지 않습니다";
+                    info3_div.innerText = "3. 영어 > 영어 문제가 출제됩니다";
+                }
             }
         }
 
@@ -309,7 +227,7 @@
             }
         }
 
-        async function doRequest() {
+        async function getQuiz() {
             const element = document.querySelector('#post-request .article-id');
             const params = {
                 questionLanguageType: parseInt(displayRadioValue('quizLangType')),
@@ -321,32 +239,270 @@
             };
             await httpclient.post('quiz/api/list', params)
                 .then(response => questions = response.data);
-
-            console.log(questions);
         }
 
         function isValidation() {
 
             if (level == "") {
-                alert("Choose Quiz level");
+                toast_option.text = "Choose Quiz level";
+                Toastify(toast_option).showToast();
                 return false;
             }
 
             if (document.getElementById("quizcount_sel").value == "") {
-                alert("Choose Quiz Count");
+                toast_option.text = "Choose Quiz Count";
+                Toastify(toast_option).showToast();
+
                 document.getElementById("quizcount_sel").focus();
                 return false;
             }
             return true;
         }
 
-        function displayRadioValue() {
-            var ele = document.getElementsByName('quizLangType');
+        function displayRadioValue(name) {
+            var ele = document.getElementsByName(name);
             for (i = 0; i < ele.length; i++) {
                 if (ele[i].checked)
                     return ele[i].value;
             }
             return "";
         }
+
+        start_btn.onclick = () => {
+
+            quizType = displayRadioValue('quizType');
+            if (!isValidation()) return;
+
+            setInfo();
+            info_box.classList.add("activeInfo");
+        }
+
+        continue_btn.onclick = () => {
+
+            if (quizType === "word") {
+                getQuiz().then(() => startQuiz());
+            } else if (quizType === "sentence") {
+                getSentenceQuiz().then(() => startSentenceQuiz());
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function startSentenceQuiz() {
+
+            info_box.classList.remove("activeInfo"); //hide info box
+            quiz_sentence_box.classList.add("activeQuiz"); //show quiz box
+
+            showSentenceQuetions(0);
+        }
+
+        async function getSentenceQuiz() {
+            const params = {
+                level: parseInt(getLevel(level)),
+                //blankcount: 2,
+                quizCount: parseInt(document.getElementById("quizcount_sel").value)
+            };
+            await httpclient.post('quiz/api/sentence/list', params)
+                .then(response => questions = response.data);
+
+        }
+
+        function showSentenceQuetions(index) {
+
+            answer_check_btn.focus();
+
+            timeValue = 25;
+            clearInterval(counter); //clear counter
+            clearInterval(counterLine); //clear counterLine
+
+            //제목
+            que_kor_title.innerText = questions[index].questionKor;
+            //문제
+            que_kor.innerHTML = questions[index].question.replaceAll("( )", '<span class="inline v-baseline" onclick=optionblankSelect(this)>  </span>');
+            //보기
+            let option_tag = '';
+            questions[index].options.forEach(option => {
+                option_tag += '<span class="inline-block v-baseline" onclick=optionWordSelect(this)>' + option + '</span>'
+            });
+            sentence_options.innerHTML = option_tag; //adding new div tag inside option_tag;
+
+            queCounter(index + 1);
+            startSentenceTimer(timeValue);
+        }
+
+        function optionblankSelect(ele) {
+            const sectionList = document.querySelectorAll(".v-baseline");
+            selected_blank_element = ele;
+            sectionList.forEach(element => {
+                element.classList.remove('selected');
+            });
+            ele.classList.add('selected');
+        }
+
+        function optionWordSelect(ele) {
+            if (!selected_blank_element) return;
+            selected_blank_element.innerText = ele.innerText;
+        }
+
+        function showAnswerResult(index) {
+
+            if (checkAnswer()) {
+                que_kor.classList.remove('incorrect');
+                que_kor.classList.add('correct');
+                que_correct_answer.innerHTML = '';
+                userScore += 1;
+            } else {
+                que_kor.classList.remove('correct');
+                que_kor.classList.add('incorrect');
+                que_correct_answer.innerHTML = questions[index].correctAnswer;
+            }
+
+            next_sentence_btn.classList.add('show');
+        }
+        function getAnswer() {
+            return que_kor.innerHTML
+                .replaceAll('<span class="inline v-baseline selected" onclick="optionblankSelect(this)">', '')
+                .replaceAll('<span class="inline v-baseline" onclick="optionblankSelect(this)">', '')
+                .replaceAll('</span>', '');
+        }
+
+        function checkAnswer() {
+            var userAnswer = getAnswer();
+            var correntAnswer = getCorrectAnswer(que_count);
+
+            if (userAnswer.replaceAll(" ", "") === correntAnswer.replaceAll(" ", "")) {
+                return true;
+            }
+            return false;
+        }
+
+        function getCorrectAnswer(index) {
+            return questions[index].correctAnswer;
+        }
+
+        function clickSentenceAnswer() {
+            if (que_count <= questions.length - 1) {
+                showAnswerResult(que_count);
+            }
+        }
+
+        answer_check_btn.onclick = () => {
+            clickSentenceAnswer();
+        }
+
+        next_sentence_btn.onclick = () => {
+            if (que_count < questions.length - 1) {
+                que_kor.classList.remove('incorrect');
+                que_kor.classList.remove('correct');
+                que_count = que_count + 1;
+                showSentenceQuetions(que_count);
+                next_sentence_btn.classList.remove('show');
+                que_correct_answer.innerHTML = '';
+            } else {
+                showResult();
+            }
+        }
+
+        exit_quiz_btn.onclick = () => {
+            window.location.reload(); //reload the current window
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+        }, false);
+
+
+        function startSentenceTimer(time) {
+
+            counter = setInterval(timer, 1000);
+
+            function timer() {
+                timeSentenceCount.textContent = time;
+                time--;
+                if (time < 9) {
+                    let addZero = timeSentenceCount.textContent;
+                    timeSentenceCount.textContent = "0" + addZero;
+                }
+                if (time < 0) {
+                    clearInterval(counter);
+                    timeSentenceText.textContent = "Time Off";
+                    clickSentenceAnswer();
+                }
+            }
+        }
+
+        function reStartSentenceQuiz() {
+
+            quiz_sentence_box.classList.add("activeQuiz"); //show quiz box
+            result_box.classList.remove("activeResult"); //hide result box
+            timeValue = 25;
+            que_count = 0;
+            que_numb = 1;
+            userScore = 0;
+            widthValue = 0;
+
+            showSentenceQuetions(que_count);
+            queCounter(que_numb);
+            clearInterval(counter);
+            clearInterval(counterLine);
+            startSentenceTimer(timeValue);
+
+            timeSentenceText.textContent = "Time Left";
+            que_kor.classList.remove('incorrect');
+            next_sentence_btn.classList.remove('show');
+            que_correct_answer.innerHTML = '';
+        }
+
+        restart_quiz.onclick = () => {
+
+            if (quizType === "sentence") {
+                getSentenceQuiz().then(() => reStartSentenceQuiz());
+            } else if (quizType === "word") {
+                getQuiz().then(() => reStartQuiz());
+            }
+
+        }
+
+@*        document.addEventListener('keydown', (event) => {
+            var name = event.key;
+            var code = event.code;
+            console.log(`Key pressed ${name} \r\n Key code value: ${code}`);
+            console.log(isActiveQuiz());
+        }, false);*@
+
+        function isActiveQuiz() {
+            let rtn = false;
+
+            if (quizType === "sentence") {
+
+                quiz_sentence_box.classList.forEach(c => {
+                    if (c == "activeQuiz") {
+                        rtn = true;
+                    }
+                });
+
+            } else if (quizType === "word") {
+
+            }
+
+            return rtn;
+        }
+
+        function queCounter(index) {
+            let totalQueCounTag = '<span><p>' + index + '</p> of <p>' + questions.length + '</p> Questions</span>';
+            bottom_ques_counters.forEach(bottom_ques_counter => {
+                bottom_ques_counter.innerHTML = totalQueCounTag;
+            });
+        }   
     </script>
 }

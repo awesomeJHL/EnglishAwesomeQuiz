@@ -6,10 +6,66 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="css/quiz.style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style>
+
+        body {
+        }
+
+        .lds-dual-ring.hidden {
+            display: none;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+            .lds-dual-ring:after {
+                content: " ";
+                display: block;
+                width: 64px;
+                height: 64px;
+                margin: 5% auto;
+                border-radius: 50%;
+                border: 6px solid #fff;
+                border-color: #fff transparent #fff transparent;
+                animation: lds-dual-ring 1.2s linear infinite;
+            }
+
+        @@keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,.8);
+            z-index: 999;
+            opacity: 1;
+            transition: all 0.5s;
+        }
+    </style>
 </head>
 <body>
     <div>
         @RenderBody()
+    </div>
+    <div id="loader" class="lds-dual-ring hidden overlay"></div>
+    <div id="overlay">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+        </div>
     </div>
 </body>
 </html>
@@ -17,5 +73,40 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/helper/httpclient.js"></script>
 <script src="js/core/quiz.maker.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>
+    let toast_option = {
+        text: "",
+        duration: 2000,
+        destination: '',
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        positionLeft: false, // `true` or `false`
+        backgroundColor: "#FF8C00"
+    };
 
+    const loader = document.getElementById('loader');
+
+    httpclient.interceptors.request.use(req => {
+        loader.classList.remove("hidden");
+        return req;
+    });
+
+    httpclient.interceptors.response.use(
+        function (response) {
+            loader.classList.add("hidden");
+            return response;
+        },
+        function (error) {
+            loader.classList.add("hidden");
+            let res = error.response;
+            if (res.status == 401) {
+                //window.location.href = 'https://example.com/login';
+            }
+            console.error('Looks like there was a problem. Status Code: ' + res.status);
+            return Promise.reject(error);
+        }
+    )
+</script>
 @await RenderSectionAsync("Scripts", required: false)

@@ -1,0 +1,956 @@
+{
+  "Words": [
+    {
+      "Word": "administration",
+      "KorWord": "",
+      "Meaning": "the executive part of a government, usually headed by a president or prime minister",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "admit",
+      "KorWord": "",
+      "Meaning": "v. to accept (“admitted to the United Nations”); to express one’s guilt or responsibility",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "advertise",
+      "KorWord": "",
+      "Meaning": "to show or present the qualities of a product to increase sales ",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "advertise",
+      "KorWord": "",
+      "Meaning": "v. to produce an effect on; to influence",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "age",
+      "KorWord": "",
+      "Meaning": "n. how old a person or thing is",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "ago",
+      "KorWord": "",
+      "Meaning": "ad. of time past; before now",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "dive",
+      "KorWord": "",
+      "Meaning": "v. to jump into water head first",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "do",
+      "KorWord": "",
+      "Meaning": "v. to act; to make an effort",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "doctor",
+      "KorWord": "",
+      "Meaning": "n. a person trained in medicine to treat sick people",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "drink",
+      "KorWord": "",
+      "Meaning": "v. to take liquid into the body through the mouth",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "during",
+      "KorWord": "",
+      "Meaning": "ad. through the whole time; while (something is happening) dust",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "dust",
+      "KorWord": "",
+      "Meaning": "n. pieces of matter so small that they can float in the air",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "duty",
+      "KorWord": "",
+      "Meaning": "n. one’s job or responsibility; what one must do ",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "each",
+      "KorWord": "",
+      "Meaning": "ad. every one by itself",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "early",
+      "KorWord": "",
+      "Meaning": "ad. at or near the beginning, especially the beginning of the day; opposite late",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "earn",
+      "KorWord": "",
+      "Meaning": "v. to be paid in return for work done",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "earth",
+      "KorWord": "",
+      "Meaning": "n. the planet we all live on; the ground or soil",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "earthquake",
+      "KorWord": "",
+      "Meaning": "n. a sudden, violent shaking of the earth’s surface",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "ease",
+      "KorWord": "",
+      "Meaning": "v. to reduce; to make less difficult",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "east",
+      "KorWord": "",
+      "Meaning": "n. the direction from which the sun rises",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "easy",
+      "KorWord": "",
+      "Meaning": "ad. not difficult; not hard to do",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "eat",
+      "KorWord": "",
+      "Meaning": "v. to take food into the body through the mouth",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "ecology",
+      "KorWord": "",
+      "Meaning": "n. the scientific study of the environment and links among living and material things",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "economy",
+      "KorWord": "",
+      "Meaning": "n. the system by which money, industry and trade are organized",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "edge",
+      "KorWord": "",
+      "Meaning": "n. the line where something ends or begins",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "education",
+      "KorWord": "",
+      "Meaning": "n. the act of teaching",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "effect",
+      "KorWord": "",
+      "Meaning": "n. the result or change caused by something (“The storm had a serious effect on the economy.”)",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "effort",
+      "KorWord": "",
+      "Meaning": "n. an attempt; the work necessary to do something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "load",
+      "KorWord": "",
+      "Meaning": "v. to put objects on or into a vehicle or container; n. that which is carried",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "loan",
+      "KorWord": "",
+      "Meaning": "n. money borrowed that usually must be returned with interest payments; something borrowed",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "local",
+      "KorWord": "",
+      "Meaning": "ad. about or having to do with one place",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "lonely",
+      "KorWord": "",
+      "Meaning": "adj. feeling alone",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "long",
+      "KorWord": "",
+      "Meaning": "ad. not short; measuring from beginning to end",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "look",
+      "KorWord": "",
+      "Meaning": "v. to turn the eyes toward so as to see; to search or hunt for; to seem to be",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "lose",
+      "KorWord": "",
+      "Meaning": "v. to have no longer; to not find; to fail to keep; to be defeated",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "loud",
+      "KorWord": "",
+      "Meaning": "ad. having a strong sound; full of sound or noise",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "love",
+      "KorWord": "",
+      "Meaning": "v. to like very much; to feel a strong, kind emotion; n. a strong, kind emotion for someone or something; opposite hate",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "low",
+      "KorWord": "",
+      "Meaning": "ad. not high or tall; below the normal height; close to the ground",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "loyal",
+      "KorWord": "",
+      "Meaning": "ad. showing strong friendship and support for someone or something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "luck",
+      "KorWord": "",
+      "Meaning": "n. something that happens by chance",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "mail",
+      "KorWord": "",
+      "Meaning": "n. letters, papers and other things sent through an official system, such as a post office",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "main",
+      "KorWord": "",
+      "Meaning": "ad. the most important or largest",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "major",
+      "KorWord": "",
+      "Meaning": "ad. great in size, importance or amount",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "majority",
+      "KorWord": "",
+      "Meaning": "n. the greater number; more than half",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "make",
+      "KorWord": "",
+      "Meaning": "v. to produce; to create; to build;",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "male",
+      "KorWord": "",
+      "Meaning": "n. a man or boy; the sex that is the father of children;ad. of or about men",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "man",
+      "KorWord": "",
+      "Meaning": "n. an adult male human",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "manufacture",
+      "KorWord": "",
+      "Meaning": "v. to make goods in large amounts",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "many",
+      "KorWord": "",
+      "Meaning": "ad. a large number or amount of",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "map",
+      "KorWord": "",
+      "Meaning": "n. a picture of the earth’s surface or a part of it",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "march",
+      "KorWord": "",
+      "Meaning": "v. to walk in a group like soldiers; to walk together in a large group to protest about something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "mark",
+      "KorWord": "",
+      "Meaning": "v. to make a sign or cut on something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "next",
+      "KorWord": "",
+      "Meaning": "ad. coming immediately after; nearest",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "nice",
+      "KorWord": "",
+      "Meaning": "ad. pleasing; good; kind",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "night",
+      "KorWord": "",
+      "Meaning": "n. the time between when the sun goes down and when it rises, when there is little or no light",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "no",
+      "KorWord": "",
+      "Meaning": "ad. used to reject or to refuse; not any; not at all",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "noise",
+      "KorWord": "",
+      "Meaning": "n. sound, especially when loud",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "nominate",
+      "KorWord": "",
+      "Meaning": "v. to name someone as a candidate for an election; to propose a person for an office or position",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "noon",
+      "KorWord": "",
+      "Meaning": "n. the middle of the day; twelve o’clock in the daytime",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "normal",
+      "KorWord": "",
+      "Meaning": "n. the usual condition, amount or form; ad. usual; what is expected",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "north",
+      "KorWord": "",
+      "Meaning": "n. the direction to the left of a person facing the rising sun",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "not",
+      "KorWord": "",
+      "Meaning": "ad. a word showing that something is denied or untrue (“She is not going.”)",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "obey",
+      "KorWord": "",
+      "Meaning": "v. to act as one is ordered to act",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "object",
+      "KorWord": "",
+      "Meaning": "v. to show that one does not like or approve; to protest; n. something not alive that can be seen or touched",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "observe",
+      "KorWord": "",
+      "Meaning": "v. to watch; to look at carefully; to celebrate or honor something (“They will observe the anniversary of the day she was born.”)",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "occupy",
+      "KorWord": "",
+      "Meaning": "v. to take and hold or to control by force",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "ocean",
+      "KorWord": "",
+      "Meaning": "n. the area of salt water that covers almost seventy–five percent of the earth’s surface; any of the five main divisions of this water",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "of",
+      "KorWord": "",
+      "Meaning": "prep. made from; belonging to; about; connected to; included among",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "off",
+      "KorWord": "",
+      "Meaning": "ad. away; at a distance; condition when something is no longer operating or continuing; not on; not connected",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "offensive",
+      "KorWord": "",
+      "Meaning": "n. a military campaign of attack; ad. having to do with attacking",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "offer",
+      "KorWord": "",
+      "Meaning": "v. to present or propose; n. the act of presenting or proposing; that which is presented or proposed iversary",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "pardon",
+      "KorWord": "",
+      "Meaning": "v. to forgive for a crime and release from punishment",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "parent",
+      "KorWord": "",
+      "Meaning": "n. a father or mother",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "parliament",
+      "KorWord": "",
+      "Meaning": "n. a government lawmaking group",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "part",
+      "KorWord": "",
+      "Meaning": "n. something less than the whole; not all of something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "particle",
+      "KorWord": "",
+      "Meaning": "n. a very small piece of matter",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "partner",
+      "KorWord": "",
+      "Meaning": "n. a person who takes part in some activity in common with another or others. (“The two men were business partners.”)",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "party",
+      "KorWord": "",
+      "Meaning": "n. a group of people working together for a political purpose; a group of people or friends gathered together for enjoyment",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "pass",
+      "KorWord": "",
+      "Meaning": "v. to go by or move around something; to move along; to cause or permit to go",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "passenger",
+      "KorWord": "",
+      "Meaning": "n. a person travelling by airplane, train, boat or car who is not the pilot or driver iversary",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "ship",
+      "KorWord": "",
+      "Meaning": "v. to transport; n. a large boat",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "should",
+      "KorWord": "",
+      "Meaning": "v. used with another verb (action word) to show responsibility, probability, or that something is believed to be a good idea",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "shrink",
+      "KorWord": "",
+      "Meaning": "v. to make or become less in size, weight or value",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "sickness",
+      "KorWord": "",
+      "Meaning": "n. the condition of being in bad health",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "situation",
+      "KorWord": "",
+      "Meaning": "n. the way things are during a period of time",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "smooth",
+      "KorWord": "",
+      "Meaning": "ad. having a level surface; opposite rough",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "slave",
+      "KorWord": "",
+      "Meaning": "n. a person owned or controlled by another",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "social",
+      "KorWord": "",
+      "Meaning": "ad. of or about people or a group",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "some",
+      "KorWord": "",
+      "Meaning": "ad. of an amount or number or part not stated; not all",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "a lot of",
+      "KorWord": "",
+      "Meaning": "much or many",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "carry out",
+      "KorWord": "",
+      "Meaning": "to do; to put into effect",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "pass a bill",
+      "KorWord": "",
+      "Meaning": "approve",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "take steps",
+      "KorWord": "",
+      "Meaning": "to start to do something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "100",
+      "KorWord": "",
+      "Meaning": "one hundred",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "1,000 one",
+      "KorWord": "",
+      "Meaning": "thousand",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "1,000,000 one",
+      "KorWord": "",
+      "Meaning": "million",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "1,000,000,000 one",
+      "KorWord": "",
+      "Meaning": "billion",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "1,000,000,000,000 one",
+      "KorWord": "",
+      "Meaning": "trillion",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "breast",
+      "KorWord": "",
+      "Meaning": "produces mothers’ milk to feed a baby",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "heart",
+      "KorWord": "",
+      "Meaning": "pumps blood through the body",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "kidneys",
+      "KorWord": "",
+      "Meaning": "clean liquid wastes from the body",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "lungs",
+      "KorWord": "",
+      "Meaning": "take in and expel air from the body",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "stomach",
+      "KorWord": "",
+      "Meaning": "breaks down food for the body to use",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "capital",
+      "KorWord": "",
+      "Meaning": "- n. money or property used to create more wealth",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "wet",
+      "KorWord": "",
+      "Meaning": "ad. covered with water or other liquid; not dry",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "whether",
+      "KorWord": "",
+      "Meaning": "conj. if it be the case or fact that",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "will",
+      "KorWord": "",
+      "Meaning": "v. a word used with action words to show future action",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "willing",
+      "KorWord": "",
+      "Meaning": "ad. being ready or having a desire to",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "wish",
+      "KorWord": "",
+      "Meaning": "v. to want; to express a desire for",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "withdraw",
+      "KorWord": "",
+      "Meaning": "v. to take or move out, away or back; to remove",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "wreck",
+      "KorWord": "",
+      "Meaning": "v. to damage greatly; to destroy; n. anything that has been badly damaged or broken",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "wrong",
+      "KorWord": "",
+      "Meaning": "ad. not correct; bad; not legal; opposite right",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "witness",
+      "KorWord": "",
+      "Meaning": "n. a person who saw and can tell about an action or event, sometimes in a court of law",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "violence",
+      "KorWord": "",
+      "Meaning": "n. the use of force to cause injury, death or damag",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "victim",
+      "KorWord": "",
+      "Meaning": "n. someone or something that is injured, killed or made to suffer; someone who is tricked",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "vegetable",
+      "KorWord": "",
+      "Meaning": "n. a plant grown for food",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "urge",
+      "KorWord": "",
+      "Meaning": "v. to advise strongly; to make a great effort to get someone to do something",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "until",
+      "KorWord": "",
+      "Meaning": "conj. up to a time; before",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    },
+    {
+      "Word": "turn",
+      "KorWord": "",
+      "Meaning": "v. to change direction; to move into a different position; to change color, form or shape",
+      "OrderKorWords": [],
+      "Level": 3,
+      "ExampleSentences": []
+    }
+  ]
+}
